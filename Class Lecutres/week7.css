@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+}
+
+.box {
+    border: 5px solid rgb(235, 188, 188);
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 15px;
+    color: rgb(235, 188, 188);
+    border-radius: 15px;
+}
