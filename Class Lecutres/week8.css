@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(239, 247, 255);
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+
+p {
+    height: 100px;
+    width: 200px;
+    background-color: red;
+    border: solid 5px blue;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 15px;
+    margin: 15px;
+}
+
+.box1 {
+    background-color: slategray;
+    height: 150px;
+    width: 300px;
+    color: white;
+    border: solid 3px slateblue;
+    border-radius: 15px;
+}
+
+#box2:hover {
+    background-color: black;
+    color: white;
+    border: solid 3px white;
+    cursor: none;
+    
+}
+
+nav {
+    width: 100vw;
+    background-color: transparent;
+}
+.navItem a {
+    text-decoration: none;
+    color: inherit;
+}
+.navItem {
+    display: inline-block;
+    color: whitesmoke;
+    padding: 15px;
+    background-color: slategrey;
+    border-radius: 10px;
+    margin: 15px;
+
+}
+
+
+.navItem:hover {
+    color: slategray;
+    padding: 15px;
+    background-color: whitesmoke;
+}
