@@ -1,0 +1,76 @@
+:root {
+/* Colors */
+  --primary-color: #0B132B;
+  --secondary-color: #3A506B;
+  --accent-color: #5BC0BE;
+  --footer-color: #1C2541;
+  --background-color: #F8FAFC;
+
+/* Font */
+  --font-family: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  max-width: 1400px;
+  margin-top: 30px;
+  margin: 0 auto;
+  padding: 0 20px;  
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--background-color);  
+    margin-top: 20px;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    max-width: 1400px;   /* limits grid width */
+    margin: 0 auto;      /* centers it horizontally */
+}
+
+.image-grid img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--footer-color);
+    color: white;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
