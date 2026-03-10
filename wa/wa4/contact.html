@@ -1,38 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-    <header>
-        <h1>Contact Me</h1>
-        <p>If you would like to get in touch, please reach out through one of the following methods:</p>
-    </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav>
-        <ul style="list-style: none; display: flex; justify-content: space-around;">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+      <div class="nav-container">
+        <a href="home.html" class="logo">David Callaghan</a>
+
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </div>
     </nav>
-    <main>
-        <section>
+    <!-- CLASSES FOR THE FORMATING OF THIS PAGE -->
+    <div class="container">
+      <div class="body-container">
+        <!-- CLASSES FOR THE FORMATING OF THIS PAGE -->
+        <header>
+          <h1>Contact Me</h1>
+          <p>
+            If you would like to get in touch, please reach out through one of
+            the following methods:
+          </p>
+        </header>
+
+        <main>
+          <section>
             <h2>Email</h2>
-            <address><p>You can reach me via email at: <a href="mailto:david.callaghan@colorado.edu">david.callaghan@colorado.edu</a></p></address>
+            <address>
+              <p>
+                You can reach me via email at:
+                <a class="emailStyle" href="mailto:david.callaghan@colorado.edu"
+                  >david.callaghan@colorado.edu</a
+                >
+              </p>
+            </address>
             <h2>Phone</h2>
             <p>You can also reach me via phone at: (123)-456-7890</p>
-        </section>
-    </main>
-        <footer>
-        <p>&copy; 2026 David Callaghan</p>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2026 David Callaghan</p>
     </footer>
-</body>
+  </body>
 </html>
