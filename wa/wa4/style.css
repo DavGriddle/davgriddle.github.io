@@ -19,6 +19,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--furtherBackground-color);
   margin: 0;
+  scrollbar-width: none;
 }
 
 /* Container for the main content inside adds padding for visual appeal */
