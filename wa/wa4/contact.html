@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,9 +19,9 @@
 
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="current-page"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -38,19 +38,38 @@
         </header>
 
         <main>
-          <section>
-            <h2>Email</h2>
-            <address>
-              <p>
-                You can reach me via email at:
-                <a class="emailStyle" href="mailto:david.callaghan@colorado.edu"
-                  >david.callaghan@colorado.edu</a
-                >
-              </p>
-            </address>
-            <h2>Phone</h2>
-            <p>You can also reach me via phone at: (123)-456-7890</p>
-          </section>
+          <div class="contactSection">
+            <section class="contactContainer">
+              <div class="item">
+                <h2>Email</h2>
+                <address>
+                  <p>
+                    You can reach me via email at:
+                    <a
+                      class="emailStyle"
+                      href="mailto:david.callaghan@colorado.edu"
+                      >david.callaghan@colorado.edu</a
+                    >
+                  </p>
+                </address>
+              </div>
+              <div class="item">
+                <h2>Phone</h2>
+                <p>You can also reach me via phone at: (123)-456-7890</p>
+              </div>
+            </section>
+            <section class="contactContainer">
+              <div class="item">
+                <h2>Social Media</h2>
+                  <p>
+                    Follow me on social media to stay updated on my latest projects and activities!
+                  </p>
+              </div>
+              <div class="item">
+                <img src="images/instagram.png" alt="Instagram Icon" class="socialIcon" />
+              </div>
+            </section>
+          </div>
         </main>
       </div>
     </div>

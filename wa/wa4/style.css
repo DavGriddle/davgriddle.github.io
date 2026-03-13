@@ -11,6 +11,7 @@
 
   /* Font */
   --font-family: "Rubik", sans-serif;
+  --expandedFont-family: "Zalando Sans Expanded", "Rubik", sans-serif;
 }
 
 /* Applies to everything in body */
@@ -19,24 +20,55 @@ body {
   background-color: var(--furtherBackground-color);
   margin: 0;
 }
+
 /* Container for the main content inside adds padding for visual appeal */
 .body-container {
   max-width: 1400px;
-  margin: 0px 50px;
-  padding: 50px 20px;
-  min-height: 75vh;
+  margin: 0 auto;
+  padding: 50px 40px;
 }
 /* behind the body container so that the rest of the page is the dark background */
 .container {
   background-color: var(--background-color);
 }
 
-/* Header for each page */
-header {
-  display: flex;
-  flex-direction: column;
+/* Custom Hero sizing and coloring! */
+.hero {
+  max-width: 1200px;
+  height: min-content;
+  margin: 0 auto;
+  padding: 20px 25px 0px 25px;
+  padding-bottom: 0;
+}
+
+header.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
-  text-align: center;
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 0;
+  max-width: 1200px;
+  gap: 70px;
+  color: white;
+}
+
+header.hero h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  opacity: 0.8;
+  margin: 0;
+  font-family: var(--expandedFont-family);
+  font-weight: 400;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  justify-self: end;
 }
 
 /* Navigation */
@@ -68,8 +100,15 @@ nav {
   top: 0;
   width: 100%;
   background-color: var(--furtherBackground-color);
+  z-index: 1000;
+  font-family: var(--expandedFont-family);
 }
-
+.current-page a {
+  color: var(--brightAccent-color);
+}
+.current-page a::after {
+  width: 100%;
+}
 .logo {
   color: white;
   text-decoration: none;
@@ -77,14 +116,15 @@ nav {
   font-size: 20px;
 }
 
-
 nav ul a {
   position: relative;
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
   color: white;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 nav ul a::after {
@@ -118,24 +158,11 @@ img {
   border-radius: 10px;
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 10px;
-  max-width: 1400px; /* limits grid width */
-  margin: 0 auto; /* centers it horizontally */
-}
-
-.image-grid img {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
 footer {
   width: 100%;
   text-align: center;
-  padding: 10px 10px;
+  padding: 10px 0;
   background-color: var(--furtherBackground-color);
   color: white;
   margin-top: 10px;
@@ -162,28 +189,265 @@ footer {
   color: var(--primary-color);
 }
 
-
 .linkStyle a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .linkStyle a:hover {
-    color: var(--linkHover-color);
+  color: var(--linkHover-color);
 }
 
 .linkStyle {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 
-    list-style: none;
-    padding: 0;
-
+  list-style: none;
+  padding: 0;
 }
 
 .emailStyle {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.smallerParagraph {
+  max-width: 600px;
+}
+
+.welcome-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.buttonStyle a {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.buttonStyle a:hover {
+  transform: scale(1.05);
+  background-color: var(--brightAccent-color);
+  color: var(--primary-color);
+}
+.listButtonStyle {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+  margin: 0 0 15px 0;
+  border: none;
+  border-radius: 2px;
+}
+
+.projectCards {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(auto-fill, 450px);
+  gap: 20px;
+  justify-content: start;
+  align-items: start;
+  height: fit-content;
+}
+
+.projectCardLayout {
+  width: 400px;
+  height: min-content;
+  margin: 0;
+  background-color: var(--content-bg);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.projectCardLayout img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.projectCardLayout h2 {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+.projectCardLayout p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.projectCardLayout a {
+  margin-top: 0;
+}
+
+.contactSection {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 50px 0;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: var(--content-bg);
+  padding: 20px 35px;
+}
+
+.contactContainer .item {
+  margin: 0;
+}
+
+.item .socialIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.item .socialIcon:hover {
+  transform: scale(1.2);
+}
+
+/* 900 LAYOUT */
+@media (max-width: 900px) {
+  header.hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .contactSection {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 50px 0;
+  }
+
+  .projectCards {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    align-items: start;
+    height: fit-content;
+    padding: 0px 20px 10px 0px;
+  }
+
+  .projectCardLayout {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    background-color: var(--content-bg);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .projectCardLayout img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .projectCardLayout h2 {
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+  .projectCardLayout p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .projectCardLayout a {
+    margin-top: 0;
+  }
+
+  .hero {
+    padding: 50px 10px 0;
+  }
+
+  .hero-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img img {
+    max-width: 320px;
+  }
+
+  .welcome-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Hide logo at 900 */
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 600px) {
+  .hero {
+    padding: 30px 10px 0;
+  }
+
+  .welcome-section {
+    gap: 20px;
+  }
+
+  header.hero h1 {
+    font-size: 3.5em;
+    line-height: 1;
+    opacity: 0.8;
+    margin: 0;
+    font-family: var(--expandedFont-family);
+    font-weight: 400;
+  }
 }

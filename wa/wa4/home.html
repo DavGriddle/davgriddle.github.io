@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,43 +19,52 @@
         <a href="home.html" class="logo">David Callaghan</a>
 
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li class="current-page"><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
+    <header class="hero">
+      <div class="hero-text">
+        <h1>David<br />Callaghan</h1>
+      </div>
+      <div class="hero-img">
+        <img
+          src="images/HeroImage.png"
+          alt="Picture of David Callaghan surrounded by nature"
+        />
+      </div>
+    </header>
     <div class="container">
       <div class="body-container">
-        <header>
-          <h1>David Callaghan</h1>
-          <p>
-            My name is David, and i am in Creative Technology & Design at the
-            University of Colorado Boulder
-          </p>
-        </header>
-
         <main>
-          <section>
-            <h2>What do i do</h2>
-            <p>
-              This portfolio showcases my work in Creative Technology & Design.
-              Here you will find projects that highlight my skills and
-              creativity.
-            </p>
-          </section>
-          <section>
-            <h2>Some Projects</h2>
-            <ul class="linkStyle">
-              <li>
-                <a href="projects.html#monumentProject">Monument Project</a>
-              </li>
-              <li>
-                <a href="projects.html#venmo"> Deceptive Redesign: Venmo App</a>
-              </li>
-            </ul>
-          </section>
+          <div class="welcome-section">
+            <section>
+              <h2>What I Do</h2>
+              <p class="smallerParagraph">
+                I am a designer and developer with a focus on creating engaging
+                and interactive experiences. I have experience in web
+                development, user interface design, and creative coding. I enjoy
+                working on projects that challenge me to think outside the box
+                and push the boundaries of what is possible with technology.
+              </p>
+            </section>
+            <section>
+              <h2>My Projects</h2>
+              <ul class="listButtonStyle">
+                <li class="buttonStyle">
+                  <a href="projects.html#monumentProject">Monument Project</a>
+                </li>
+                <li class="buttonStyle">
+                  <a href="projects.html#venmo">
+                    Deceptive Redesign: Venmo App</a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
         </main>
       </div>
     </div>

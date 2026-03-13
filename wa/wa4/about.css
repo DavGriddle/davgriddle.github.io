@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  --primary-color: #1f2933; /* dark slate text */
+  --secondary-color: #4b5563; /* softer gray text */
+  --accent-color: #2563eb; /* blue accent */
+  --brightAccent-color: #a0beff; /* blue accent */
+  --furtherBackground-color: #111827; /* very dark nav/footer */
+  --background-color: #f9fafb; /* page background */
+  --content-bg: #ffffff; /* content area */
+  --linkHover-color: #007abc; /* blue for link hovers */
+
+  /* Font */
+  --font-family: "Rubik", sans-serif;
+  --expandedFont-family: "Zalando Sans Expanded", "Rubik", sans-serif;
+}
+
+.aboutSection {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.aboutSection section {
+    background-color: var(--content-bg);
+    border-radius: 15px;
+    padding: 20px 35px;
+}
+
+
+/* Image Gallery */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 0 auto; /* centers it horizontally */
+}
+
+.image-grid img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+  transform: scale(1.02);
+}
