@@ -19,8 +19,9 @@ body {
   font-family: var(--font-family);
   background-color: var(--furtherBackground-color);
   margin: 0;
-  scrollbar-width: none;
+  overflow-x: hidden;
 }
+
 
 /* Container for the main content inside adds padding for visual appeal */
 .body-container {
@@ -158,7 +159,6 @@ img {
   height: auto;
   border-radius: 10px;
 }
-
 
 footer {
   width: 100%;
