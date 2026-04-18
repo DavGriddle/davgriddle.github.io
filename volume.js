@@ -25,17 +25,17 @@ function checkRules(text) {
 
   const results = [
     upper.length >= 1, //Validation for [0] is there at least 1 uppercase letter? (RETURNS A TRUE OR FALSE VALUE)
-    upper.length <= 3, //At space [1] is there at most 3 uppercase letters? (RETURNS A TRUE OR FALSE VALUE)
+    upper.length > 3, //At space [1] is there at least 3 uppercase letters? (RETURNS A TRUE OR FALSE VALUE)
     text.length > 12, // space [2] (ruleItems[2] / results[2]) - Is there more than 12 letters?
     text.includes("!") ||
       text.includes("@") ||
       text.includes("#") ||
       text.includes("$") ||
       text.includes("%"), // Is there a special character
-    !text.toLowerCase().includes("password"), // Is the word password in it? It first tho will say like NOT (changes text to lowercase so that we dont need to test each single variation of upper and lowercase letter)
+    text.toLowerCase().includes("password"), // Is the word password in it? It first tho will say like NOT (changes text to lowercase so that we dont need to test each single variation of upper and lowercase letter)
     digits.length >= 1, // Are there more than 1 numbers
     text.toLowerCase().includes("e"), // Does it include E or e? This is the same as password but only for the letter e
-    !text.toLowerCase().includes("a"), // Password but A/a
+    text.toLowerCase().includes("a"), // Password but A/a
     lower.includes(text[0]) || upper.includes(text[0]), //At place number 1 does it have a upper or lowercase letter (STARTS WITH LETTER)
     digits.includes(text[text.length - 1]), // Checks the last item in the input to see if it is a number
     text.toLowerCase().includes("vol"), //does it inlcude VOL vol Vol VOl vOl vOL voL (only did it to proove the ease of converting it to lowercase)
@@ -45,8 +45,8 @@ function checkRules(text) {
     lower.length >= 1, //At least 1 lowercase
     text.toLowerCase().includes("loud"), //contains loud
     text.includes("5"), // includes the number 5
-    !text.includes("7"), //doesnt include 7
-    !text.toLowerCase().includes("zzz"), //doesnt include zzz
+    text.includes("7"), //doesnt include 7
+    !text.includes("*"), //doesnt include *
     text.match(/(.)\1/) !== null, //includes a double (i dont understand this as well but i got it from the internet!)
   ];
 
@@ -72,7 +72,7 @@ function updateUI(results) {
   rulesCount.textContent = passed + " / 20 passed"; //Displays the text of how many passed
 
   currentVolume = passed * 5; //Each pass is 5% 
-  
+
   volumeFill.style.width = currentVolume + "%"; //Just updates the width
   volumeValue.textContent = currentVolume + "%"; //Updates the text that shows the %
 }
