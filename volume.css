@@ -15,6 +15,19 @@ body {
   border: 1px solid #ddd;
 }
 
+.note {
+  font-family: "Ubuntu Mono", monospace;
+  background-color: rgba(255, 237, 237, 0.473);
+  max-width: 650px;
+  margin: 0px auto;
+  padding: 20px 24px 20px 24px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+}
+.note p {
+  margin: 0;
+}
+
 hr {
   border: none;
   border-top: 1px solid #ddd;
@@ -89,6 +102,7 @@ h1 {
   background: #7a6355;
   border-radius: 999px;
   transition: width 0.4s ease;
+  /* When the width gets updated, the transition will just go making it look nise */
 }
 
 /* Form */
@@ -190,6 +204,7 @@ form button:active {
 /* Valid/invalid indicator dot */
 .rules-list li::before {
   content: "";
+
   position: absolute;
   left: 13px;
   top: 50%;
@@ -202,6 +217,7 @@ form button:active {
 .rules-list li.valid {
   background-color: #edf7ed;
   color: #2d6a2d;
+  text-decoration: line-through;
 }
 
 .rules-list li.valid::before {

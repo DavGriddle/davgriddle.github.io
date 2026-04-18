@@ -15,6 +15,15 @@
   </head>
 
   <body>
+    <div class="note">
+      <p>
+        NOTE: This is almost finished, just waiting on feedback. Right now its
+        not possible to get lower than a 30% i dont think since some validations
+        are always true, i plan on changing that soon to makeit possible to get
+        below a 30%.
+      </p>
+    </div>
+
     <div class="container">
       <div class="eyebrow">
         <p>Final Project</p>
@@ -41,7 +50,7 @@
         </div>
 
         <form id="volumeForm">
-          <p>Enter "Volume Password" to control the volume:</p>
+          <label for="volumeInput">Volume Password:</label>
           <input
             id="volumeInput"
             type="text"
@@ -53,10 +62,10 @@
         <section class="rules-section">
           <div class="rules-header">
             <h2>Validation Rules</h2>
-            <span class="rules-count">0 / 20 passed</span>
+            <span class="rules-count"  aria-live="polite">0 / 20 passed</span>
           </div>
-
-          <ul class="rules-list">
+         
+          <ul class="rules-list" aria-live="polite">  <!-- THE ARIA WILL READ OUT CHANGES -->
             <li class="invalid">Must include one Capital letter</li>
             <li class="invalid">Cannot exceed 3 capital letters</li>
             <li class="invalid">Password must be longer than 12 characters</li>
