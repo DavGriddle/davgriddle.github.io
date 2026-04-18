@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#cab7a3" />
+    <title>Volume Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="volume.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="eyebrow">
+        <p>Final Project</p>
+        <p>David Callaghan</p>
+      </div>
+
+      <hr />
+
+      <h1>Volume Validation</h1>
+      <p class="subtitle">
+        Input text to control the volume, for each validation you pass, the
+        volume will increase by 5%.
+      </p>
+
+      <main>
+        <div class="volume-section">
+          <div class="volume-header">
+            <span>Current Volume</span>
+            <span class="volume-value">0%</span>
+          </div>
+          <div class="volume-bar">
+            <div class="volume-fill"></div>
+          </div>
+        </div>
+
+        <form id="volumeForm">
+          <p>Enter "Volume Password" to control the volume:</p>
+          <input
+            id="volumeInput"
+            type="text"
+            placeholder="Enter volume control text here"
+          />
+          <button id="submitVolume" type="submit">Update Volume</button>
+        </form>
+
+        <section class="rules-section">
+          <div class="rules-header">
+            <h2>Validation Rules</h2>
+            <span class="rules-count">0 / 20 passed</span>
+          </div>
+
+          <ul class="rules-list">
+            <li class="invalid">Must include one Capital letter</li>
+            <li class="invalid">Cannot exceed 3 capital letters</li>
+            <li class="invalid">Password must be longer than 12 characters</li>
+            <li class="invalid">Password must include 1 special character</li>
+            <li class="invalid">Password must not contain "password"</li>
+            <li class="invalid">Must include at least one number</li>
+            <li class="invalid">Must include the letter "e"</li>
+            <li class="invalid">Must NOT include the letter "a"</li>
+            <li class="invalid">Must start with a letter</li>
+            <li class="invalid">Must end with a number</li>
+            <li class="invalid">Must contain the word "vol"</li>
+            <li class="invalid">Must NOT contain spaces</li>
+            <li class="invalid">Must include at least 2 vowels</li>
+            <li class="invalid">Must include at least 3 consonants</li>
+            <li class="invalid">Must contain a lowercase letter</li>
+            <li class="invalid">Must include the word "loud"</li>
+            <li class="invalid">Must include the number 5</li>
+            <li class="invalid">Must NOT include the number 7</li>
+            <li class="invalid">Must NOT include "zzz"</li>
+            <li class="invalid">Must include a double letter</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script src="volume.js"></script>
+  </body>
+</html>
