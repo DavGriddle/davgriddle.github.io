@@ -1,9 +1,28 @@
 body {
   font-family: "Alan Sans", sans-serif;
   background-color: #ede8e3;
-  margin: 20px;
+  margin: 0;
   display: flex;
   flex-direction: column;
+}
+
+.container > body {
+  margin: 20px;
+  align-items: center;
+}
+
+footer {
+  padding: 20px 50px;
+  background-color: #f7f4f1;
+  display: flex;
+  flex-direction: column;
+  color: #1a1a1a;
+}
+
+a {
+  color: #7a6355;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .container {
