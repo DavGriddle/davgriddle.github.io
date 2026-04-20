@@ -26,7 +26,7 @@ function checkRules(text) {
   const results = [
     upper.length >= 1, //Validation for [0] is there at least 1 uppercase letter? (RETURNS A TRUE OR FALSE VALUE)
     upper.length > 3, //At space [1] is there at least 3 uppercase letters? (RETURNS A TRUE OR FALSE VALUE)
-    text.length > 12, // space [2] (ruleItems[2] / results[2]) - Is there more than 12 letters?
+    text.length < 21, // space [2] (ruleItems[2] / results[2]) - Is there more than 12 letters?
     text.includes("!") ||
       text.includes("@") ||
       text.includes("#") ||
