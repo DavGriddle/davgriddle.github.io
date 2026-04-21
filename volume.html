@@ -17,6 +17,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility,visibility_off"
     />
+
+    <!-- RECAPTCHA: -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>
@@ -38,6 +41,10 @@
       <p class="subtitle">
         Input text to control the volume, for each validation you pass, the
         volume will increase by 5%.
+        <br />
+        <br />
+        Passing ReCapTCHA tests increase the volume by 1% for each test passed.
+        This allows for every unique integer to be achieved between 0% and 100%.
       </p>
 
       <main>
@@ -67,6 +74,11 @@
             >
             <button type="button" id="togglePassword">Show</button>
           </div>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LdKQMMsAAAAAKth-gWYvNiJG8x_G6pSr0YIure3"
+            data-callback="onCaptchaSuccess"
+          ></div>
           <button id="submitVolume" type="submit">Submit Volume</button>
         </form>
         <section class="rules-section">

@@ -12,6 +12,7 @@ form.addEventListener("submit", function (e) {
   const text = input.value;
   const results = checkRules(text);
   updateUI(results);
+  alert("Volume Changed to " + currentVolume + "%");
 });
 
 form.addEventListener("keyup", function (e) {
@@ -80,6 +81,8 @@ function updateUI(results) {
     }
 
     //Done, loop again until we finish the list.
+
+    currentVolume = passed * 5 + (captchaPassed ? 4 : 0);
   }
 
   rulesCount.textContent = passed + " / 20 passed"; //Displays the text of how many passed
@@ -114,3 +117,9 @@ toggleBtn.addEventListener("click", function () {
 
 //   document.getElementById("browserWarning").textContent = "Sorry you are on Safari: I have done my best to hide the password suggestions in Safari but they apparently ignore the autocorrect off suggestion in HTML, you may get a prompt to save password, sorry about that.";
 // }
+
+let captchaPassed = false;
+
+function onCaptchaSuccess() {
+  captchaPassed = true;
+}
