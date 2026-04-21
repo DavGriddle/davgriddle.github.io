@@ -81,13 +81,11 @@ function updateUI(results) {
     }
 
     //Done, loop again until we finish the list.
-
-    currentVolume = passed * 5 + (captchaPassed ? 4 : 0);
   }
 
   rulesCount.textContent = passed + " / 20 passed"; //Displays the text of how many passed
 
-  currentVolume = passed * 5; //Each pass is 5%
+  currentVolume = passed * 5 + (captchaPassed ? 4 : 0);
 
   volumeFill.style.width = currentVolume + "%"; //Just updates the width
   volumeValue.textContent = currentVolume + "%"; //Updates the text that shows the %
