@@ -132,3 +132,5 @@ function onCaptchaExpired() {
   captchaPassed = false;
   document.getElementById("submitVolume").disabled = true;
 }
+
+document.getElementById("top").scrollIntoView();
