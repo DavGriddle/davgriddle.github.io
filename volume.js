@@ -73,18 +73,18 @@ function updateUI(results) {
     const rulePassed = results[index]; //It says true or false based on if the INDEX result has that tag check below for the THEN
 
     if (rulePassed === true) {
-      // For the current item, if it is passed (TRUE) then we update its class to say valid,
       item.className = "valid";
+      item.querySelector(".rule-icon").textContent = "check_circle";
     } else {
-      // If its anything but true, so false or null, then we say its invalid.
       item.className = "invalid";
+      item.querySelector(".rule-icon").textContent = "cancel";
     }
 
     //Done, loop again until we finish the list.
   }
 
   rulesCount.textContent = passed + " / 20 passed"; //Displays the text of how many passed
-  currentVolume = passed * 5 ;
+  currentVolume = passed * 5;
 
   if (!(currentVolume >= 100)) {
     // do nothing

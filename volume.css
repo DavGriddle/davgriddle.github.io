@@ -30,7 +30,7 @@ a {
   width: calc(90% - 40px);
   max-width: 800px;
   margin: 25px auto;
-  padding: 12px 24px 28px 24px;
+  padding: 28px 24px 12px 24px;
   border-radius: 16px;
   border: 1px solid #ddd;
 }
@@ -202,8 +202,9 @@ input:focus {
   border-color: #cab7a3;
   box-shadow: 0 0 0 3px rgba(202, 183, 163, 0.25);
 }
-
-form button {
+.submit-button {
+  margin-bottom: 10px;
+  width: 100%;
   padding: 11px;
   font-size: 15px;
   font-family: "Alan Sans", sans-serif;
@@ -218,16 +219,16 @@ form button {
     transform 0.1s;
 }
 
-form button:hover {
+.submit-button:hover {
   background-color: #6a5347;
 }
 
-form button:active {
+.submit-button:active {
   transform: scale(0.98);
   background-color: #5c4740;
 }
 
-form button:disabled {
+.submit-button:disabled {
   background-color: #dbdbdb;
   cursor: not-allowed;
   color: #b9b9b9;
@@ -235,7 +236,7 @@ form button:disabled {
 
 /* Rules Section */
 .rules-section {
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 .rules-header {
@@ -265,47 +266,51 @@ form button:disabled {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .rules-list li {
-  padding: 10px 12px 10px 36px;
+  padding: 10px 12px 10px 30px;
   border-radius: 10px;
   font-size: 13.5px;
   line-height: 1.4;
   position: relative;
+  /* Align the text vertically */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
 }
 
-/* Valid/invalid indicator dot */
-.rules-list li::before {
-  content: "";
-
-  position: absolute;
-  left: 13px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
+/* Valid/invalid indicators */
 
 .rules-list li.valid {
-  background-color: #dbdbdb;
-  color: #b9b9b9;
-  text-decoration: line-through;
+  background-color: #D1FAE5;
+  color: #065F46;
+  transition: all 0.3s;
 }
 
-.rules-list li.valid::before {
-  background-color: #b9b9b9;
-}
 
 .rules-list li.invalid {
-  background-color: white;
+  background-color: rgb(255, 207, 207);
   color: #555;
+  transition: all 0.3s;
+}
+.rule-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;        /* smaller icon */
 }
 
-.rules-list li.invalid::before {
-  background-color: #ccc;
+.rules-list li.valid .rule-icon {
+  color: #10B981;
 }
+
+.rules-list li.invalid .rule-icon {
+  color: #870000;
+}
+
 
 /* Mobile Screen Adjustments */
 @media (max-width: 768px) {

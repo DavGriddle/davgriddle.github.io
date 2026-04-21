@@ -11,15 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="volume.css" />
     <!-- Here is the link i found for the SVG show and hide icons -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility,visibility_off"
-    />
-
     <!-- RECAPTCHA: -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
   </head>
 
   <body>
@@ -30,17 +27,13 @@
     </div> -->
 
     <div class="container">
-      <div class="eyebrow">
-        <p>Final Project | Draft #4</p>
-        <p>David Callaghan</p>
-      </div>
-
-      <hr />
-
       <h1>Volume Validation</h1>
       <p class="subtitle">
         Input text to control the volume, for each validation you pass, the
         volume will increase by 5%.
+        <br />
+        It is possible to reach 0% volume and 100% volume. (Hint: Spaces count
+        as characters).
       </p>
 
       <main>
@@ -70,6 +63,47 @@
             >
             <button type="button" id="togglePassword">Show</button>
           </div>
+          <section class="rules-section">
+            <div class="rules-header">
+              <h2>Validation Rules</h2>
+              <span class="rules-count" aria-live="polite">3 / 20 passed</span>
+            </div>
+
+            <ul class="rules-list" aria-live="polite">
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include one Capital letter</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must exceed 3 capital letters</li>
+              <li class="valid"><span class="material-symbols-outlined rule-icon">check_circle</span>Password must not exceed 20 characters</li>
+              <li class="invalid"> <span class="material-symbols-outlined rule-icon">cancel</span>
+                Password must include at least one of "!, @, #,$, %"
+              </li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Password must contain "password"</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include at least one number</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include the letter "e"</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include the letter "a"</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must start with a letter</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must end with a number</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must contain the word "vol"</li>
+              <li class="valid"><span class="material-symbols-outlined rule-icon">check_circle</span>Must NOT contain spaces</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include at least 2 vowels</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include at least 3 consonants</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must contain a lowercase letter</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include the word "loud"</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include the number 5</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include the number 7</li>
+              <li class="valid"><span class="material-symbols-outlined rule-icon">check_circle</span>Must NOT include "*"</li>
+              <li class="invalid"><span class="material-symbols-outlined rule-icon">cancel</span>Must include a double character</li>
+            </ul>
+          </section>
+
+          <button
+            class="submit-button"
+            id="submitVolume"
+            type="submit"
+            disabled
+          >
+            Submit Volume
+          </button>
+
           <div
             class="g-recaptcha"
             data-sitekey="6LdKQMMsAAAAAKth-gWYvNiJG8x_G6pSr0YIure3"
@@ -78,48 +112,16 @@
           >
             >
           </div>
-          <button id="submitVolume" type="submit" disabled>
-            Submit Volume
-          </button>
         </form>
-        <section class="rules-section">
-          <div class="rules-header">
-            <h2>Validation Rules</h2>
-            <span class="rules-count" aria-live="polite">3 / 20 passed</span>
-          </div>
 
-          <ul class="rules-list" aria-live="polite">
-            <li class="invalid">Must include one Capital letter</li>
-            <li class="invalid">Must exceed 3 capital letters</li>
-            <li class="valid">Password must not exceed 20 characters</li>
-            <li class="invalid">
-              Password must include at least one of "!, @, #,$, %"
-            </li>
-            <li class="invalid">Password must contain "password"</li>
-            <li class="invalid">Must include at least one number</li>
-            <li class="invalid">Must include the letter "e"</li>
-            <li class="invalid">Must include the letter "a"</li>
-            <li class="invalid">Must start with a letter</li>
-            <li class="invalid">Must end with a number</li>
-            <li class="invalid">Must contain the word "vol"</li>
-            <li class="valid">Must NOT contain spaces</li>
-            <li class="invalid">Must include at least 2 vowels</li>
-            <li class="invalid">Must include at least 3 consonants</li>
-            <li class="invalid">Must contain a lowercase letter</li>
-            <li class="invalid">Must include the word "loud"</li>
-            <li class="invalid">Must include the number 5</li>
-            <li class="invalid">Must include the number 7</li>
-            <li class="valid">Must NOT include "*"</li>
-            <li class="invalid">Must include a double character</li>
-          </ul>
-        </section>
+        <hr />
+
+        <div class="eyebrow">
+          <p>Final Project | Draft #4</p>
+          <p>David Callaghan</p>
+        </div>
       </main>
     </div>
-    <footer>
-      <div class="footerBlock">
-        <p>View My Projects <a href="/wa/wa4/projects.html">HERE</a></p>
-      </div>
-    </footer>
     <script src="volume.js"></script>
   </body>
 </html>
