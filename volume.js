@@ -8,10 +8,13 @@ const ruleItems = document.querySelectorAll(".rules-list li");
 let currentVolume = 0;
 
 form.addEventListener("submit", function (e) {
+  input.value = ""; // Clears the input after submission
+
   e.preventDefault();
   const text = input.value;
   const results = checkRules(text);
   updateUI(results);
+
   alert("Volume Changed to " + currentVolume + "%");
 });
 
@@ -121,7 +124,7 @@ toggleBtn.addEventListener("click", function () {
 //   document.getElementById("browserWarning").textContent = "Sorry you are on Safari: I have done my best to hide the password suggestions in Safari but they apparently ignore the autocorrect off suggestion in HTML, you may get a prompt to save password, sorry about that.";
 // }
 
-let captchaPassed = false;
+let captchaPassed = true;
 
 function onCaptchaSuccess() {
   captchaPassed = true;
