@@ -14,6 +14,17 @@ form.addEventListener("submit", function (e) {
   updateUI(results);
 });
 
+form.addEventListener("keyup", function (e) {
+  const text = input.value;
+  const results = checkRules(text);
+  updateUI(results);
+});
+form.addEventListener("keydown", function (e) {
+  const text = input.value;
+  const results = checkRules(text);
+  updateUI(results);
+});
+
 function checkRules(text) {
   const upper = text.split("").filter((c) => c >= "A" && c <= "Z"); //Separates uppercase letters for the result below
   const vowels = text.split("").filter((c) => "aeiouAEIOU".includes(c)); // Separates vowels for the results also
