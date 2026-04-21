@@ -84,9 +84,10 @@ function updateUI(results) {
   }
 
   rulesCount.textContent = passed + " / 20 passed"; //Displays the text of how many passed
+  currentVolume = passed * 5 + (captchaPassed ? 1 : 0); //If the captcha is passed, it adds 1 to the volume, if not it adds 0
 
   if (!(currentVolume >= 100)) {
-    currentVolume = passed * 5 + (captchaPassed ? 1 : 0); //If the captcha is passed, it adds 1 to the volume, if not it adds 0
+    // do nothing
   } else {
     currentVolume = 100; // If the volume is already at 100% then it stays at 100%
   }
