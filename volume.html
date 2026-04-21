@@ -12,18 +12,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="volume.css" />
+    <!-- Here is the link i found for the SVG show and hide icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility,visibility_off"
+    />
   </head>
 
   <body>
-    <!-- <div class="note">
+    <!-- <div class="note" id="note">
       <p>NOTE:</p>
-      <p>
+      <p id="browserWarning">
       </p>
-    </div>
- -->
+    </div> -->
+
     <div class="container">
       <div class="eyebrow">
-        <p>Final Project | Draft 3</p>
+        <p>Final Project | Draft #4</p>
         <p>David Callaghan</p>
       </div>
 
@@ -39,7 +44,7 @@
         <div class="volume-section">
           <div class="volume-header">
             <span>Current Volume</span>
-            <span class="volume-value">10%</span>
+            <span class="volume-value">15%</span>
           </div>
           <div class="volume-bar">
             <div class="volume-fill"></div>
@@ -48,25 +53,33 @@
 
         <form id="volumeForm">
           <label for="volumeInput">Volume Password:</label>
-          <input
-            id="volumeInput"
-            type="text"
-            placeholder="Enter volume control text here"
-          />
+          <div class="input-container">
+            <input
+              id="volumeInput"
+              type="password"
+              placeholder="Enter volume control text here"
+              autocomplete="off"
+            />
+            <!-- The autocomplete is SUPPOSED to stop the browser from nagging to save the password -->
+            <!-- Show/Hide password button with icon -->
+            <span id="toggleIcon" class="material-symbols-outlined"
+              >visibility_off</span
+            >
+            <button type="button" id="togglePassword">Show</button>
+          </div>
           <button id="submitVolume" type="submit">Update Volume</button>
         </form>
-
         <section class="rules-section">
           <div class="rules-header">
             <h2>Validation Rules</h2>
-            <span class="rules-count" aria-live="polite">2 / 20 passed</span>
+            <span class="rules-count" aria-live="polite">3 / 20 passed</span>
           </div>
 
           <ul class="rules-list" aria-live="polite">
             <!-- THE ARIA WILL READ OUT CHANGES -->
             <li class="invalid">Must include one Capital letter</li>
             <li class="invalid">Must exceed 3 capital letters</li>
-            <li class="invalid">Password must not exceed 20 characters</li>
+            <li class="valid">Password must not exceed 20 characters</li>
             <li class="invalid">
               Password must include at least one of "!, @, #,$, %"
             </li>
@@ -85,13 +98,12 @@
             <li class="invalid">Must include the number 5</li>
             <li class="invalid">Must include the number 7</li>
             <li class="valid">Must NOT include "*"</li>
-            <li class="invalid">Must include a double letter</li>
+            <li class="invalid">Must include a double character</li>
           </ul>
         </section>
       </main>
     </div>
-
-    <footer> 
+    <footer>
       <div class="footerBlock">
         <p>View My Projects <a href="/wa/wa4/projects.html">HERE</a></p>
       </div>

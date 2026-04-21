@@ -60,19 +60,46 @@ function updateUI(results) {
     const item = ruleItems[index];
     const rulePassed = results[index]; //It says true or false based on if the INDEX result has that tag check below for the THEN
 
-    if (rulePassed === true) { // For the current item, if it is passed (TRUE) then we update its class to say valid,
+    if (rulePassed === true) {
+      // For the current item, if it is passed (TRUE) then we update its class to say valid,
       item.className = "valid";
-    } else { // If its anything but true, so false or null, then we say its invalid.
+    } else {
+      // If its anything but true, so false or null, then we say its invalid.
       item.className = "invalid";
     }
 
-    //Done, loop again until we finish the list. 
+    //Done, loop again until we finish the list.
   }
 
   rulesCount.textContent = passed + " / 20 passed"; //Displays the text of how many passed
 
-  currentVolume = passed * 5; //Each pass is 5% 
+  currentVolume = passed * 5; //Each pass is 5%
 
   volumeFill.style.width = currentVolume + "%"; //Just updates the width
   volumeValue.textContent = currentVolume + "%"; //Updates the text that shows the %
 }
+
+// Show/Hide Password code:
+const toggleBtn = document.getElementById("togglePassword");
+const toggleIcon = document.getElementById("toggleIcon");
+
+toggleBtn.addEventListener("click", function () {
+  if (volumeInput.type === "password") {
+    volumeInput.type = "text";
+    toggleIcon.textContent = "visibility";
+    togglePassword.textContent = "Hide";
+  } else {
+    volumeInput.type = "password";
+    toggleIcon.textContent = "visibility_off";
+    togglePassword.textContent = "Show";
+  }
+});
+
+// const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+// const safariNote = document.getElementById("note");
+// safariNote.style.display = "none";
+// if (isSafari) {
+// safariNote.style.display = "block";
+
+//   document.getElementById("browserWarning").textContent = "Sorry you are on Safari: I have done my best to hide the password suggestions in Safari but they apparently ignore the autocorrect off suggestion in HTML, you may get a prompt to save password, sorry about that.";
+// }

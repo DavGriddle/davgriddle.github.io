@@ -115,7 +115,7 @@ h1 {
 }
 
 .volume-fill {
-  width: 10%;
+  width: 15%;
   height: 100%;
   background: #7a6355;
   border-radius: 999px;
@@ -123,7 +123,14 @@ h1 {
   /* When the width gets updated, the transition will just go making it look nise */
 }
 
+
+
 /* Form */
+/* THIS IS THE SHOW HIDE ICON STUFF from google, idk what this means but it works */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -136,6 +143,46 @@ form p {
   font-weight: 600;
   font-size: 14px;
   color: #333;
+}
+
+div.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+div.input-container input {
+  flex: 1;
+}
+div.input-container span {
+  width: 15px;
+  height: min-content;
+  opacity: 0.6;
+  /* Center Verticaly */
+  align-self: center;
+  flex-shrink: 0;
+}
+
+div.input-container button {
+  flex-shrink: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  transition:
+    color 0.2s,
+    transform 0.1s;
+}
+div.input-container button:hover {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6a5347;
+}
+div.input-container button:active {
+  transform: scale(0.98);
+  background-color: transparent;
 }
 
 input {
@@ -250,3 +297,6 @@ form button:active {
 .rules-list li.invalid::before {
   background-color: #ccc;
 }
+
+
+
