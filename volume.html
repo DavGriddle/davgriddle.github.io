@@ -41,9 +41,6 @@
       <p class="subtitle">
         Input text to control the volume, for each validation you pass, the
         volume will increase by 5%.
-        <br />
-        <br />
-        The recaptcha test will add an additonal 1% volume, but its not requirede to change volume
       </p>
 
       <main>
@@ -78,7 +75,9 @@
             data-sitekey="6LdKQMMsAAAAAKth-gWYvNiJG8x_G6pSr0YIure3"
             data-callback="onCaptchaSuccess"
           ></div>
-          <button id="submitVolume" type="submit">Submit Volume</button>
+          <button id="submitVolume" type="submit" disabled>
+            Submit Volume
+          </button>
         </form>
         <section class="rules-section">
           <div class="rules-header">

@@ -124,12 +124,14 @@ h1 {
   /* When the width gets updated, the transition will just go making it look nise */
 }
 
-
-
 /* Form */
 /* THIS IS THE SHOW HIDE ICON STUFF from google, idk what this means but it works */
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 20;
 }
 
 form {
@@ -223,6 +225,12 @@ form button:hover {
 form button:active {
   transform: scale(0.98);
   background-color: #5c4740;
+}
+
+form button:disabled {
+  background-color: #dbdbdb;
+  cursor: not-allowed;
+  color: #b9b9b9;
 }
 
 /* Rules Section */
