@@ -127,3 +127,8 @@ function onCaptchaSuccess() {
   captchaPassed = true;
   document.getElementById("submitVolume").disabled = false;
 }
+
+function onCaptchaExpired() {
+  captchaPassed = false;
+  document.getElementById("submitVolume").disabled = true;
+}
